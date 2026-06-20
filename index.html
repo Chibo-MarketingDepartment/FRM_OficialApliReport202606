@@ -1911,5 +1911,33 @@ body {
 </html>
 
 <script>
-// 既存スクリプトの後に追記
+// ── タブクリック → スムーススクロール ──
+document.querySelectorAll('.tab-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const id = btn.dataset.target;
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
+
+// ── スクロール時にアクティブタブを更新 ──
+const _sections = Array.from(document.querySelectorAll('.section[id]'));
+const _tabBtns  = document.querySelectorAll('.tab-btn');
+
+function updateActive() {
+  const scrollY = window.scrollY + 56 + 40;
+  let current = _sections[0];
+  _sections.forEach(s => { if (scrollY >= s.offsetTop) current = s; });
+  _tabBtns.forEach(b => {
+    b.classList.toggle('active', b.dataset.target === current.id);
+  });
+  // アクティブタブをナビ内に表示
+  const activeBtn = document.querySelector('.tab-btn.active');
+  if (activeBtn) {
+    activeBtn.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+  }
+}
+window.addEventListener('scroll', updateActive, { passive: true });
+updateActive();
 </script>
