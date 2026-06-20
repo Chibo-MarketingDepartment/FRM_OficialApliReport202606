@@ -770,7 +770,7 @@ body {
   <div class="msg-bar">堺東（8.20%）と平均（2.1%）の差は約4倍。横展開の前に成功要因の深掘り分析が必要</div>
 
   <div class="card">
-    <div class="card-label" style="margin-bottom:14px">主要店舗 ファン率ランキング（50名以上の店舗）</div>
+    <div class="card-label" style="margin-bottom:14px">アプリ実施全店 ファン率ランキング（29店舗）</div>
     <div class="bars">
       <div class="bar-row">
         <div class="bar-label">🥇 堺東支店</div>
@@ -808,117 +808,102 @@ body {
   <div class="gap-lg"></div>
 
   <div class="card">
-    <div class="card-label" style="margin-bottom:12px">店舗別 詳細データ（主要店舗）</div>
-    <table class="tbl">
+    <div class="card-label" style="margin-bottom:12px">アプリ実施全店データ（29店舗）<span id="sort-indicator" style="font-weight:400;color:var(--gray4);font-size:12px;margin-left:8px">▼ ファン率順</span></div>
+    <div style="overflow-x:auto">
+    <table class="tbl" id="store-tbl" style="font-size:13px;min-width:700px">
       <thead>
-        <tr><th>店舗名</th><th>会員数</th><th>休眠率</th><th>育成率</th><th>ファン率</th><th>ロイヤル率</th></tr>
+        <tr>
+          <th style="width:28px">#</th>
+          <th data-col="name" style="cursor:pointer;user-select:none;white-space:nowrap">店舗名 <span class="sort-icon">⇅</span></th>
+          <th data-col="mem" style="cursor:pointer;user-select:none;text-align:right">会員数 <span class="sort-icon">⇅</span></th>
+          <th data-col="ky"  style="cursor:pointer;user-select:none;text-align:right">休眠率 <span class="sort-icon">⇅</span></th>
+          <th data-col="sh"  style="cursor:pointer;user-select:none;text-align:right">新規率 <span class="sort-icon">⇅</span></th>
+          <th data-col="ik"  style="cursor:pointer;user-select:none;text-align:right">育成率 <span class="sort-icon">⇅</span></th>
+          <th data-col="fa"  style="cursor:pointer;user-select:none;text-align:right">ファン率 <span class="sort-icon">▼</span></th>
+          <th data-col="ro"  style="cursor:pointer;user-select:none;text-align:right">ロイヤル率 <span class="sort-icon">⇅</span></th>
+          <th data-col="fn"  style="cursor:pointer;user-select:none;text-align:right">ファン+<br>ロイヤル数 <span class="sort-icon">⇅</span></th>
+          <th data-col="rn"  style="cursor:pointer;user-select:none;text-align:right">ロイヤル数 <span class="sort-icon">⇅</span></th>
+        </tr>
       </thead>
-      <tbody>
-        <tr><td class="t-name">堺東支店</td><td>3,413</td><td class="t-bad">52.4%</td><td>13.5%</td><td class="t-fan">8.76%</td><td class="t-royal">3.16%</td></tr>
-        <tr><td class="t-name">高槻阪急スクエア</td><td>4,495</td><td class="t-bad">63.1%</td><td>10.6%</td><td class="t-fan">6.72%</td><td class="t-royal">1.96%</td></tr>
-        <tr><td class="t-name">札幌アスティ45</td><td>212</td><td class="t-bad">62.7%</td><td>6.1%</td><td class="t-fan">6.60%</td><td class="t-royal">3.77%</td></tr>
-        <tr><td class="t-name">リノアス八尾</td><td>4,744</td><td class="t-bad">62.6%</td><td>11.0%</td><td class="t-fan">4.76%</td><td class="t-royal">0.86%</td></tr>
-        <tr><td class="t-name">せんちゅうパル</td><td>3,970</td><td class="t-bad">79.2%</td><td>6.2%</td><td class="t-fan">2.95%</td><td class="t-royal">0.96%</td></tr>
-        <tr><td class="t-name">有明ガーデン</td><td>5,620</td><td class="t-bad">78.8%</td><td>5.6%</td><td class="t-fan">1.99%</td><td class="t-royal">0.39%</td></tr>
-        <tr><td class="t-name">あべのキューズモール</td><td>5,117</td><td class="t-bad">76.5%</td><td>5.1%</td><td class="t-fan">1.97%</td><td class="t-royal">0.61%</td></tr>
-        <tr><td class="t-name">そごう横浜</td><td>8,295</td><td class="t-bad">70.1%</td><td>6.3%</td><td class="t-fan">1.87%</td><td class="t-royal">0.37%</td></tr>
-      </tbody>
+      <tbody id="store-tbody"></tbody>
     </table>
-  </div>
-
-  <div class="insight">
-    <div class="insight-label">経営層への示唆</div>
-    上位店舗に共通するのは「<strong>商業施設内の地域密着型立地</strong>」という特性。近隣住民が日常的に訪れる生活圏で、CRMとの相性が良い。
-    一方、会員数の多い有明ガーデン（5,620名）・あべのキューズモール（5,117名）・そごう横浜（8,295名）は<strong>底上げすると絶対的な来店数インパクトが最大</strong>になる。横展開の優先ターゲット。
-  </div>
-</section>
-
-<!-- ════════ 成功事例 ════════ -->
-<section class="section" id="s5">
-  <div class="section-head">
-    <span class="section-num">05</span>
-    <h2 class="section-title">成功事例：堺東の成功要因を解明し、全店展開の基盤を作る</h2>
-  </div>
-
-  <div class="msg-bar">ファン率8.20%・ロイヤル率2.94%は全体の4〜6倍。ただし横展開の前に、まず成功要因を深掘り分析することが先決</div>
-
-  <div class="cards-2">
-    <div class="card highlight">
-      <div class="card-label" style="color:var(--red)">🏆 堺東支店 — 数字の全容</div>
-      <div class="cards-2" style="margin-top:12px;gap:8px">
-        <div style="text-align:center;padding:10px;background:var(--gray1);border-radius:6px">
-          <div style="font-size:13px;color:var(--gray4)">会員数</div>
-          <div style="font-size:22px;font-weight:900;color:var(--navy)">3,413名</div>
-        </div>
-        <div style="text-align:center;padding:10px;background:var(--gray1);border-radius:6px">
-          <div style="font-size:13px;color:var(--gray4)">平均年齢</div>
-          <div style="font-size:22px;font-weight:900;color:var(--navy)">51歳</div>
-        </div>
-        <div style="text-align:center;padding:10px;background:var(--red-lt);border-radius:6px">
-          <div style="font-size:13px;color:var(--gray4)">ファン率</div>
-          <div style="font-size:22px;font-weight:900;color:var(--red)">8.76%</div>
-          <div style="font-size:12px;color:var(--red)">全体比 4.2倍</div>
-        </div>
-        <div style="text-align:center;padding:10px;background:#FBF8EE;border-radius:6px">
-          <div style="font-size:13px;color:var(--gray4)">ロイヤル率</div>
-          <div style="font-size:22px;font-weight:900;color:var(--royal)">3.16%</div>
-          <div style="font-size:12px;color:var(--royal)">全体比 5.9倍</div>
-        </div>
-        <div style="text-align:center;padding:10px;background:var(--gray1);border-radius:6px">
-          <div style="font-size:13px;color:var(--gray4)">女性比率</div>
-          <div style="font-size:22px;font-weight:900;color:var(--navy)">58%</div>
-        </div>
-        <div style="text-align:center;padding:10px;background:var(--gray1);border-radius:6px">
-          <div style="font-size:13px;color:var(--gray4)">ロイヤル人数</div>
-          <div style="font-size:22px;font-weight:900;color:var(--royal)">108名</div>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-label">全体平均との比較</div>
-      <div class="bars" style="margin-top:12px">
-        <div style="margin-bottom:14px">
-          <div style="font-size:13px;font-weight:700;color:var(--navy);margin-bottom:4px">ファン率</div>
-          <div style="display:flex;gap:6px;align-items:center">
-            <div style="flex:1;height:24px;background:var(--gray2);border-radius:3px;overflow:hidden">
-              <div style="width:24%;height:100%;background:var(--gray3);display:flex;align-items:center;padding-left:6px;font-size:11px;font-weight:700;color:var(--white)">全体 2.1%</div>
-            </div>
-          </div>
-          <div style="display:flex;gap:6px;align-items:center;margin-top:4px">
-            <div style="flex:1;height:24px;background:var(--gray2);border-radius:3px;overflow:hidden">
-              <div style="width:100%;height:100%;background:var(--red);display:flex;align-items:center;padding-left:6px;font-size:11px;font-weight:700;color:var(--white)">堺東 8.76%（4.2倍）</div>
-            </div>
-          </div>
-        </div>
-        <div style="margin-bottom:14px">
-          <div style="font-size:13px;font-weight:700;color:var(--navy);margin-bottom:4px">ロイヤル率</div>
-          <div style="display:flex;gap:6px;align-items:center">
-            <div style="flex:1;height:24px;background:var(--gray2);border-radius:3px;overflow:hidden">
-              <div style="width:17%;height:100%;background:var(--gray3);display:flex;align-items:center;padding-left:6px;font-size:11px;font-weight:700;color:var(--white)">0.54%</div>
-            </div>
-          </div>
-          <div style="display:flex;gap:6px;align-items:center;margin-top:4px">
-            <div style="flex:1;height:24px;background:var(--gray2);border-radius:3px;overflow:hidden">
-              <div style="width:100%;height:100%;background:var(--royal);display:flex;align-items:center;padding-left:6px;font-size:11px;font-weight:700;color:var(--white)">3.16%（5.9倍）</div>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div style="font-size:13px;font-weight:700;color:var(--navy);margin-bottom:4px">休眠率（低いほど良い）</div>
-          <div style="display:flex;gap:6px;align-items:center">
-            <div style="flex:1;height:24px;background:var(--gray2);border-radius:3px;overflow:hidden">
-              <div style="width:100%;height:100%;background:var(--kyumin);display:flex;align-items:center;padding-left:6px;font-size:11px;font-weight:700;color:var(--white)">全体 71.0%</div>
-            </div>
-          </div>
-          <div style="display:flex;gap:6px;align-items:center;margin-top:4px">
-            <div style="flex:1;height:24px;background:var(--gray2);border-radius:3px;overflow:hidden">
-              <div style="width:73.8%;height:100%;background:var(--ikusei);display:flex;align-items:center;padding-left:6px;font-size:11px;font-weight:700;color:var(--white)">堺 52.4%</div>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
+  <script>
+  (function(){
+    var STORES = [{"name": "堺東支店", "mem": 3670, "ky": 52.6, "sh": 26.3, "ik": 12.9, "fa": 8.2, "ro": 2.9, "fn": 301, "rn": 108}, {"name": "高槻阪急スクエア支店", "mem": 4495, "ky": 63.1, "sh": 19.6, "ik": 10.6, "fa": 6.7, "ro": 2.0, "fn": 302, "rn": 88}, {"name": "札幌アスティ45店", "mem": 212, "ky": 62.7, "sh": 24.5, "ik": 6.1, "fa": 6.6, "ro": 3.8, "fn": 14, "rn": 8}, {"name": "リノアス八尾支店", "mem": 4744, "ky": 62.6, "sh": 21.6, "ik": 11.0, "fa": 4.8, "ro": 0.9, "fn": 226, "rn": 41}, {"name": "せんちゅうパル店", "mem": 4000, "ky": 79.2, "sh": 11.7, "ik": 6.1, "fa": 3.0, "ro": 1.0, "fn": 119, "rn": 39}, {"name": "岡山大安寺店", "mem": 757, "ky": 55.9, "sh": 27.1, "ik": 14.1, "fa": 2.9, "ro": 0.7, "fn": 22, "rn": 5}, {"name": "高松レインボー店", "mem": 1993, "ky": 71.6, "sh": 18.7, "ik": 6.9, "fa": 2.8, "ro": 0.5, "fn": 56, "rn": 10}, {"name": "セレオ八王子支店", "mem": 3535, "ky": 62.7, "sh": 26.8, "ik": 8.0, "fa": 2.5, "ro": 0.8, "fn": 88, "rn": 30}, {"name": "京橋京阪モール支店", "mem": 2397, "ky": 55.8, "sh": 36.1, "ik": 5.6, "fa": 2.4, "ro": 0.6, "fn": 58, "rn": 15}, {"name": "ららぽーと名古屋みなとアクルス支店", "mem": 7131, "ky": 67.2, "sh": 23.4, "ik": 7.1, "fa": 2.3, "ro": 0.4, "fn": 161, "rn": 28}, {"name": "静岡パルシェ店", "mem": 577, "ky": 64.5, "sh": 29.5, "ik": 4.0, "fa": 2.1, "ro": 0.9, "fn": 12, "rn": 5}, {"name": "ザ・モール仙台長町店", "mem": 424, "ky": 55.4, "sh": 33.0, "ik": 9.4, "fa": 2.1, "ro": 0.0, "fn": 9, "rn": 0}, {"name": "有明ガーデン支店", "mem": 5620, "ky": 78.8, "sh": 13.6, "ik": 5.6, "fa": 2.0, "ro": 0.4, "fn": 112, "rn": 22}, {"name": "あべのキューズモール支店", "mem": 5117, "ky": 76.5, "sh": 16.4, "ik": 5.1, "fa": 2.0, "ro": 0.6, "fn": 101, "rn": 31}, {"name": "そごう横浜店", "mem": 8295, "ky": 70.1, "sh": 21.7, "ik": 6.3, "fa": 1.9, "ro": 0.4, "fn": 155, "rn": 31}, {"name": "ハービスPLAZA梅田支店", "mem": 1666, "ky": 77.7, "sh": 18.2, "ik": 2.3, "fa": 1.8, "ro": 0.2, "fn": 30, "rn": 4}, {"name": "イオンモール各務原インター支店", "mem": 2410, "ky": 73.4, "sh": 17.8, "ik": 7.1, "fa": 1.8, "ro": 0.5, "fn": 43, "rn": 11}, {"name": "仙台一番町店", "mem": 680, "ky": 58.5, "sh": 34.7, "ik": 5.0, "fa": 1.8, "ro": 0.4, "fn": 12, "rn": 3}, {"name": "ルミネ立川支店", "mem": 6477, "ky": 60.3, "sh": 31.3, "ik": 6.8, "fa": 1.6, "ro": 0.4, "fn": 103, "rn": 29}, {"name": "京都アバンティ支店", "mem": 4702, "ky": 75.1, "sh": 18.7, "ik": 4.7, "fa": 1.5, "ro": 0.4, "fn": 69, "rn": 20}, {"name": "千日前本店", "mem": 1755, "ky": 82.9, "sh": 11.1, "ik": 4.5, "fa": 1.5, "ro": 0.3, "fn": 27, "rn": 6}, {"name": "舞 千房 イクスピアリ店", "mem": 8372, "ky": 78.1, "sh": 16.3, "ik": 4.5, "fa": 1.1, "ro": 0.2, "fn": 94, "rn": 17}, {"name": "有楽町ビックカメラ支店", "mem": 10415, "ky": 58.8, "sh": 35.2, "ik": 4.9, "fa": 1.0, "ro": 0.2, "fn": 105, "rn": 23}, {"name": "千房 ヨドバシHD池袋ビル支店", "mem": 9745, "ky": 78.6, "sh": 16.6, "ik": 3.9, "fa": 0.9, "ro": 0.2, "fn": 87, "rn": 21}, {"name": "道頓堀ビル店", "mem": 609, "ky": 83.1, "sh": 14.1, "ik": 2.0, "fa": 0.8, "ro": 0.0, "fn": 5, "rn": 0}, {"name": "曽根崎支店", "mem": 1322, "ky": 84.9, "sh": 12.6, "ik": 1.9, "fa": 0.7, "ro": 0.1, "fn": 9, "rn": 1}, {"name": "名代千房 JO-TERRACE OSAKA店", "mem": 2053, "ky": 56.2, "sh": 41.7, "ik": 1.9, "fa": 0.1, "ro": 0.0, "fn": 3, "rn": 1}];
+    var sortCol = 'fa';
+    var sortAsc = false;
+
+    function fanColor(v){
+      if(v>=5.0) return 'color:#C0392B;font-weight:700';
+      if(v>=3.0) return 'color:#E8720C;font-weight:700';
+      if(v>=2.0) return 'color:#1A7A5E';
+      return 'color:#6B7A90';
+    }
+    function royalColor(v){
+      if(v>=2.0) return 'color:#B5860D;font-weight:700';
+      if(v>=1.0) return 'color:#E8720C';
+      return 'color:#6B7A90';
+    }
+
+    function render(){
+      var data = STORES.slice().sort(function(a,b){
+        var av = a[sortCol], bv = b[sortCol];
+        if(typeof av === 'string') return sortAsc ? av.localeCompare(bv,'ja') : bv.localeCompare(av,'ja');
+        return sortAsc ? av - bv : bv - av;
+      });
+
+      var tbody = document.getElementById('store-tbody');
+      var html = '';
+      data.forEach(function(s, i){
+        html += '<tr>'
+          + '<td style="text-align:center;color:#6B7A90;font-size:12px">' + (i+1) + '</td>'
+          + '<td style="font-weight:700;color:#1A2540;white-space:nowrap">' + s.name + '</td>'
+          + '<td style="text-align:right">' + s.mem.toLocaleString() + '</td>'
+          + '<td style="text-align:right;color:#8A8A8A">' + s.ky + '%</td>'
+          + '<td style="text-align:right">' + s.sh + '%</td>'
+          + '<td style="text-align:right">' + s.ik + '%</td>'
+          + '<td style="text-align:right;' + fanColor(s.fa) + '">' + s.fa + '%</td>'
+          + '<td style="text-align:right;' + royalColor(s.ro) + '">' + s.ro + '%</td>'
+          + '<td style="text-align:right;font-weight:700;color:#1A2540">' + s.fn + '</td>'
+          + '<td style="text-align:right;color:#B5860D;font-weight:700">' + s.rn + '</td>'
+          + '</tr>';
+      });
+      tbody.innerHTML = html;
+
+      // ヘッダーアイコン更新
+      var ths = document.querySelectorAll('#store-tbl thead th[data-col]');
+      ths.forEach(function(th){
+        var ic = th.querySelector('.sort-icon');
+        if(!ic) return;
+        if(th.dataset.col === sortCol){
+          ic.textContent = sortAsc ? '▲' : '▼';
+          th.style.color = '#C0392B';
+        } else {
+          ic.textContent = '⇅';
+          th.style.color = '';
+        }
+      });
+
+      // インジケーター更新
+      var colNames = {name:'店舗名',mem:'会員数',ky:'休眠率',sh:'新規率',ik:'育成率',fa:'ファン率',ro:'ロイヤル率',fn:'ファン+ロイヤル数',rn:'ロイヤル数'};
+      var ind = document.getElementById('sort-indicator');
+      if(ind) ind.textContent = (sortAsc ? '▲' : '▼') + ' ' + colNames[sortCol] + '順';
+    }
+
+    document.querySelectorAll('#store-tbl thead th[data-col]').forEach(function(th){
+      th.addEventListener('click', function(){
+        var col = th.dataset.col;
+        if(sortCol === col){ sortAsc = !sortAsc; }
+        else { sortCol = col; sortAsc = (col === 'name'); }
+        render();
+      });
+    });
+
+    render();
+  })();
+  </script>
 
   <div class="gap-lg"></div>
 
